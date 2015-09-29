@@ -1,0 +1,12 @@
+
+Version 1.0
+- Three roles: admin, editor, viewer.
+- Support multiples LDAPs (Open Ldap, MS Active Directory, Notes Domino) or local database for authentication, and CAS.
+- Can talk with SQLite, PostgreSQL, MySQL, MSSQL, FireBird, Oracle, IBM DB2, etc.
+- Full users accountability: open session, time zone and IPs request, etc.
+- Multi views for the back end frontend design.
+- Custom email templates for sending notification to the users.
+- Custom error pages...
+- All static pages can be rendered in one function.
+- Support editing for multi languges.
+- Optimize SEO

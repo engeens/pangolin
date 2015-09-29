@@ -1,0 +1,13 @@
+# Files exclude
+*.pyc
+*~
+wizard.metadata
+
+# Folders exclude
+errors/
+cache/
+sessions/
+databases/
+
+#Files exclude
+controllers/appadmin.py

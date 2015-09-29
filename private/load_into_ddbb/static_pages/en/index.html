@@ -1,0 +1,44 @@
+{{extend 'default/layout.html'}}
+
+<section class="jumbotron">
+  <div class="container">
+    <h1>Your index page</h1>
+  </div>
+</section>
+
+To change the language modify rename <web2py-root-dir>/examples/routes.parametric.example.py to routes.py
+<br>
+
+http://localhost:8000/pangonin/es/home/show/contact
+<br>
+http://localhost:8000/pangonin/en/home/show/contact
+<br>
+<br>
+
+If lang is not set it will take the browser configuration, if not the default lang in your settings.
+<br>
+<br>
+For admin dashboad: <a href="{{=URL('admin', 'index', args=[])}}" name="installing" id="installing" class="anchor">ADMIN</a>
+
+<br>
+<br>
+Social networks just modify this info in your admin dashboad:
+<br>
+{{=response.facebook}}
+<br>
+{{=response.twitter}}
+<br>
+{{=response.github}}
+<br>
+{{=response.linkedin}}
+<br><br>
+Some examples:
+<br>
+Example 1: <a href="{{=URL('home', 'show', args=['about-us'])}}" name="installing" id="installing" class="anchor">About us</a>
+<br>
+Example 2 (it works, test it): <a href="{{=URL('home', 'show', args=['contact'])}}" name="installing" id="installing" class="anchor">Contact</a>
+<br>
+Example 3: <a href="{{=URL('home', 'show', args=['comming-soon'])}}" name="installing" id="installing" class="anchor">Comming soon page</a>
+<br>
+Example 4: <a href="{{=URL('home', 'show', args=['under-maintenance'])}}" name="installing" id="installing" class="anchor">Under maintenace</a>
+<br>
