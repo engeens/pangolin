@@ -164,6 +164,7 @@ class Base(object):
             from gluon.http import redirect
             redirect(URL(self.request.application, 'home', 'show', args=['under-maintenance']))
 
+        self.response.theme = self.config.take('general.default_theme')
         self.response.view = '%s/%s' % (self.config.take('general.default_theme'), view)
         # Social networks
         self.response.facebook = self.config.take('social_networks.facebook')

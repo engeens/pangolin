@@ -1,4 +1,5 @@
-{{extend 'default/layout_admin.html'}}
+{{extend '%s/layout_admin.html' % response.theme}}
+
 <link rel="stylesheet" href="{{=URL('static','css/morris.css')}}"/>
 
 <div class="row">
