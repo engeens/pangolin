@@ -152,15 +152,15 @@ class Base(object):
 
         # When comming soon is enable for the global env.
         if str2bool(self.config.take('status.enable_comming_soon')) == True and not self.auth.user \
-                and not self.request.function == 'admin' and not self.request.controller == 'appadmin' \
-                and not self.request.args(0) == 'comming-soon':
+                and not self.request.controller == 'admin' and not self.request.controller == 'appadmin' \
+                and not self.request.function == 'user' and not self.request.args(0) == 'comming-soon':
             from gluon.http import redirect
             redirect(URL(self.request.application, 'home', 'show', args=['comming-soon']))
 
         # When under-maintenance is enable for the global env.
         if str2bool(self.config.take('status.enable_under_maintenance')) == True and not self.auth.user \
-                and not self.request.function == 'admin' and not self.request.controller == 'appadmin' \
-                and not self.request.args(0) == 'under-maintenance':
+                and not self.request.controller == 'admin' and not self.request.controller == 'appadmin' \
+                and not self.request.function == 'user' and not self.request.args(0) == 'under-maintenance':
             from gluon.http import redirect
             redirect(URL(self.request.application, 'home', 'show', args=['under-maintenance']))
 
