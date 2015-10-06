@@ -1,4 +1,9 @@
 
+Version 1.0.1
+- Added response.view to html views
+- Fixed under-maintenance and comming-soon global option
+- Fixed unique key length for Mysql
+
 Version 1.0
 - Three roles: admin, editor, viewer.
 - Support multiples LDAPs (Open Ldap, MS Active Directory, Notes Domino) or local database for authentication, and CAS.
