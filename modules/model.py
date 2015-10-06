@@ -41,14 +41,14 @@ class BaseModel(object):
     def _t_lang(self):
         self.db.define_table('t_lang',
             Field('f_name', 'string'),
-            Field('f_lang_code', unique=True)
+            Field('f_lang_code', length=255,, unique=True)
             )
 
     @_depends_on('t_lang')
     def _t_email_template(self):
         self.db.define_table('t_email_template',
             Field("f_subject_text", "string"),
-            Field('f_key_template', unique=True, compute=lambda r: '%s-%s' % (r.f_template_key, r.f_lang_id)),
+            Field('f_key_template', length=255,, unique=True, compute=lambda r: '%s-%s' % (r.f_template_key, r.f_lang_id)),
             Field("f_template_key", "string", notnull=True),
             Field('f_lang_id', 'reference t_lang', requires=IS_IN_DB(self.db, self.db.t_lang.id, '%(f_name)s')),
             Field('f_lang_code', writable=False,
@@ -66,7 +66,7 @@ class BaseModel(object):
     @_depends_on('t_lang')
     def _t_page(self):
         self.db.define_table('t_page',
-            Field('f_key_page', unique=True, compute=lambda r: '%s-%s' % (r.f_slug_key, r.f_lang_id)),
+            Field('f_key_page', unique=True, length=255, compute=lambda r: '%s-%s' % (r.f_slug_key, r.f_lang_id)),
             Field('f_title', "string", notnull=True),
             Field('f_lang_id', 'reference t_lang', requires=IS_IN_DB(self.db, self.db.t_lang.id, '%(f_name)s')),
             Field('f_description', "text"),
