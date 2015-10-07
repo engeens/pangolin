@@ -1,31 +1,23 @@
 # Pangolin
-Pangolin is a micro core CMS. It has been developed to have the basic structure to develop escalable and big web application looking for the best performance.
+Pangolin is a lightweight micro CMS that provides a basic structure to build scalable and large web apps in addition and not the least, Pangolin achieves great  performance managing web contents.
 
 ##Features:
 
-1- Three roles: admin, editor, viewer.
+- Access control: Users can be enrolled within follow three roles: admin,editor, viewer.
 
-2- Support multiples LDAPs (Open Ldap, MS Active Directory, Notes Domino) or local database for authentication, and CAS.
+- Sing-in and Authentication: Users can be authenticates in local database or  an external directory(It supports LDAP, Microsoft Active Directory and Lotus Note Domain). It ca also be deployed with Central Authentication System(CAS).
 
-3- Can talk with SQLite, PostgreSQL, MySQL, MSSQL, FireBird, Oracle, IBM DB2, etc.
+- Accountability: Login and logout, active sessions, source IP, etc.
 
-4- Full users accountability: open session, time zone and IPs request, etc.
+- Data Bases: SQLite, PostgreSQL, MySQL, MSSQL, Firebird, Oracle and IBM DB2.
 
-5- Multi views for the back end frontend design.
+- Multi-language
 
-6- Custom email templates for sending notification to the users.
+- Static pages rendering in just one function
 
-7- Custom error pages...
+- Debugging: Custom error pages
 
-8- All static pages can be rendered in one function.
-
-9- Support editing for multi languges.
-
-10- Optimize SEO
-
-11- Easy to setup one entire web page. Move all your static pages into: private/load_into_ddbb and run:
-
-    http://localhost:8000/eng/default/init
+- Search Engine Optimisation: besides Pangolin manages traditional features such as headers, name, title, etc. Sitemap.xml and explicit search engines from Google, Linkedin and Twiter are included
 
 
 ## Screenshots:
@@ -71,11 +63,14 @@ For more details how to make it works with Apache, Nginx, etc, please take a loo
 
 http://web2py.com/books/default/chapter/29/13/deployment-recipes
 
-### Setting app the CAS server app:
+### Setup your entire website in just two steps:
 
-Run: http://localhost:8000/pangolin/default/init
+1. Move your static pages into private/load_into_ddbb
+
+2. From your favourite browser   http://localhost:8000/pangolin/default/init
 
 Once the app is installed modify the attribute INIT_APP from models/0_settings.py
+
 ```
 INIT_APP =  False
 ```
